@@ -20,10 +20,10 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Analyze with SonarCload
-        uses: sonarsource/sonarcloud-github-action@v1.3
+        uses: SonarSource/sonarcloud-github-action@v1.6
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify 
       

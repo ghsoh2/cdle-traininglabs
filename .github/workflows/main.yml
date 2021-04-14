@@ -28,7 +28,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Analyze with SonarCload
-        run: >
+        uses: >
           sonarsource/sonarcloud-github-action@master
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=certifaiai

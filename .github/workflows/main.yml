@@ -31,9 +31,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Analyze with SonarCload
         run: >
-          mvn --batch-mode
-          -Pcoverage
-          sonar:sonar
+          mvn clean package sonar:sonar
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=certifaiai
           -Dsonar.projectKey=CertifaiAI_classifai

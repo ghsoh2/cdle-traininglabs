@@ -24,7 +24,7 @@ jobs:
       - name: Analyze with SonarCload
 #         uses: sonarsource/sonarcloud-github-action@master
         run: >
-          mvnw --batch-mode
+          mvn --batch-mode
           -Pcoverage
           sonar:sonar
           -Dsonar.host.url=https://sonarcloud.io

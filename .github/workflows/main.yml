@@ -24,7 +24,7 @@ jobs:
       - name: Analyze with SonarCload
 #         uses: sonarsource/sonarcloud-github-action@master
         run: >
-          mvn --batch-mode
+          mvn clean verify
           -Pcoverage
           org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar
           -Dsonar.host.url=https://sonarcloud.io

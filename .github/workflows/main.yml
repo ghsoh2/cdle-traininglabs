@@ -22,7 +22,15 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Analyze with SonarCload
-        uses: sonarsource/sonarcloud-github-action@master
+#         uses: sonarsource/sonarcloud-github-action@master
+        run: >
+          mvnw --batch-mode
+          -Pcoverage
+          sonar:sonar
+          -Dsonar.host.url=https://sonarcloud.io
+          -Dsonar.organization=certifaiai
+          -Dsonar.projectKey=CertifaiAI_TrainingLabs
+          -Dsonar.sources=dl4j-cv-labs/src/main
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

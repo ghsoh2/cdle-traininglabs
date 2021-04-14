@@ -26,7 +26,7 @@ jobs:
         run: >
           mvn --batch-mode
           -Pcoverage
-          sonar:sonar
+          org.sonarsource.scanner.maven:sonar-maven-plugin:3.1.7:sonar
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=certifaiai
           -Dsonar.projectKey=CertifaiAI_TrainingLabs

@@ -24,7 +24,7 @@ jobs:
       - name: Analyze with SonarCload
 #         uses: sonarsource/sonarcloud-github-action@master
         run: >
-          mvn clean deploy sonar:sonar
+          mvn clean package sonar:sonar
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=certifaiai
           -Dsonar.projectKey=CertifaiAI_TrainingLabs

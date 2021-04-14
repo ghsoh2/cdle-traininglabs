@@ -30,7 +30,7 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=certifaiai
           -Dsonar.projectKey=CertifaiAI_TrainingLabs
-          -Dsonar.sources=dl4j-cv-labs/src/main
+          -Dsonar.sources=.
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

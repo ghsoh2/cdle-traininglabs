@@ -90,6 +90,7 @@
                                     <version>[${maven.minimum.version},)</version>
                                     <message>********** Minimum Maven Version is ${maven.minimum.version}. Please upgrade Maven before continuing (run "mvn --version" to check). **********</message>
                                 </requireMavenVersion>
+                                <outputFormats>json</outputFormats>
                             </rules>
                         </configuration>
                     </execution>
@@ -137,6 +138,7 @@
                                     <pluginExecutionFilter>
                                         <groupId>com.lewisd</groupId>
                                         <artifactId>lint-maven-plugin</artifactId>
+                                        <outputFormats>json</outputFormats>
                                         <versionRange>[0.0.11,)</versionRange>
                                         <goals>
                                             <goal>check</goal>
